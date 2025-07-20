@@ -1,9 +1,9 @@
 {
-  "name": "kwk-scrollytelling-template",
+  "name": "bwdc-data-storytelling-challenge",
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://jasminesamra.github.io/kwk-scrollytelling-template",
+  "homepage": "https://shanalinali.github.io/BWDC_Data_Storytelling_Challenge",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

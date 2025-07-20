@@ -4,5 +4,5 @@ import { svelte } from '@sveltejs/vite-plugin-svelte'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [svelte()],
-  base: '/kwk-scrollytelling-template/'
+  base: '/BWDC_Data_Storytelling_Challenge/'
 })
