@@ -4,21 +4,23 @@
 </script>
 
 <div>
-    <Scroller layout="right">
-        {#snippet sticky()}
-            <img class="duck-img" src="duck.png" alt="KWK rubber duck!" />
-        {/snippet}
-
+    <Scroller layout="left">
         {#snippet scrolly()}
             <ArticleText>
                 <strong>
-                    Your final project might look totally different from this
-                    template!
+                    BWDC credit here lolz KWK Challenge credit here lolz
                 </strong>
             </ArticleText>
 
-            <ArticleText>It's yours to create.</ArticleText>
+            <ArticleText>Little self plug perchance?</ArticleText>
         {/snippet}
+
+        {#snippet sticky()}
+        <!-- TODO: add an image of myself lolol -->
+            <img class="duck-img" src="duck.png" alt="KWK rubber duck!" />
+        {/snippet}
+
+        
     </Scroller>
 </div>
 

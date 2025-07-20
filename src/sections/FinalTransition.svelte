@@ -6,11 +6,15 @@
 <div class="text-container">
   <div class="content">
     <ArticleText>
-      Education does not immediately guarentee financial stability—the stark contrast between workers at the same educational level reveals such.
+      I urge you to not blindly believe that a degree will grant you wealth. 
+      <br /><br />
+      The sooner we realize this disparity, the sooner we can combat the barriers that <i>cause</i >this. 
+      <br /><br />
+      Education can return to its value today, as we were promised when we first started this educational journey. 
     </ArticleText>
 
     <ArticleText>
-      Let's consider the earnings of households now, and see if this trend persists.
+      yap yap sappy Call To Action insert :o
     </ArticleText>
   </div>
 </div>

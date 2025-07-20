@@ -3,9 +3,9 @@
 // make less cringey lol
   const title = "Then, why pursue higher education?";
   const subtitle =
-    "Education alone doesn't seem like a fair indicator of job worth anymore.";
+    "My two cents? Don't.";
   const author =
-    'But keep your chin up...';
+    '';
 </script>
 
 <TitleCard {title} {subtitle} {author} />

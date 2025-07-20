@@ -1,5 +1,5 @@
 <script>
-    // `layout` can be either "right" or "left"
+    // `layout` can be either "right," "left," or "center"
     // `sticky` and `scrolly` are the snippets passed in (see one of the examples)
     let { layout, sticky, scrolly } = $props(); 
 </script>

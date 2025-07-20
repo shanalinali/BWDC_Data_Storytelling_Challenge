@@ -6,11 +6,11 @@
 <div class="text-container">
   <div class="content">
     <ArticleText>
-      Education does not immediately guarentee financial stability—the stark contrast between workers at the same educational level reveals such.
+      ...until you understand the trade-offs involved.
     </ArticleText>
 
     <ArticleText>
-      Let's consider the earnings of households now, and see if this trend persists.
+      Here's one last graph to put my sentiment into perspective.
     </ArticleText>
   </div>
 </div>

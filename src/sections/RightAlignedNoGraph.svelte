@@ -39,37 +39,48 @@
       <!-- using the Svelte JS typewriting transition here would be goated -->
       <ObservedArticleText {callback} {options}>
         <i
-          >"You can't learn this now. If you do, you won't want to finish your
-          studies—you'll be making enough money to forget about them."</i
+          >"You can't learn this now.
+          <br /><br />
+          If you do, you won't want to finish your studies—you'll be making enough
+          money to forget about them."</i
         >
       </ObservedArticleText>
 
       <ArticleText>
         <strong>My father's words </strong>, spoken in Bangla, settle over me,
-        and I laugh. Our 30-minute carpool drive to work almost always circles
-        back to the topic of me trading stocks soon.
+        and I laugh.
+        <br /><br />
+        Our 30-minute carpool drive to work almost always circles back to the topic
+        of me trading stocks soon.
       </ArticleText>
 
       <ArticleText>
         <strong>I know the merit</strong> behind understanding today's market
-        trends, of course. However, my Computer Science undergraduate degree
-        will hold value to me too, once I achieve it.
+        trends, of course.
+        <br /><br />
+        However, my Computer Science undergraduate degree will hold value to me too,
+        once I achieve it.
         <br /><br />
         Why would my education's value <i>diminish</i> in the context of wealth?
       </ArticleText>
 
       <ArticleText>
         <strong>It's a common question</strong> for current college students,
-        like myself. Shockingly, the value of education today <i>is</i> getting
-        murkier.
+        like myself.
         <br /><br />
+        Shockingly, the value of education today <i>is</i> getting murkier.
+      </ArticleText>
+
+      <ArticleText>
         <strong
           >2025 reveals a <a
             href="https://www.cnbc.com/2025/05/16/how-college-grads-can-find-a-job-in-a-tough-market.html"
             >5.8% unemployment rate</a
           ></strong
         >
-        among recent college graduates. Even with a degree, educated workers are
+        among recent college graduates. 
+        <br /><br />
+        Even with a degree, educated workers are
         struggling to find jobs.
         <br /><br />
       </ArticleText>
@@ -78,11 +89,12 @@
 </div>
 
 <style>
-  p {
+  /* TODO: Delete this if unneeded! */
+  /* p {
     font-size: 1rem;
     color: #f6e8ea;
     text-shadow: 1px 1px 0 #36242b;
     margin-top: 1rem;
     font-family: Georgia;
-  }
+  } */
 </style>
