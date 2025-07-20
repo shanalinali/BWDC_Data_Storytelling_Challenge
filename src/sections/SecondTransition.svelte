@@ -6,11 +6,12 @@
 <div class="text-container">
   <div class="content">
     <ArticleText>
+    <ArticleText>
       Education does not immediately guarentee financial stability—the stark contrast between workers at the same educational level reveals such.
     </ArticleText>
-
-    <ArticleText>
-      Let's consider the earnings of households now, and see if this trend persists.
+      <ArticleText>
+        To further understand the relationship between education and wealth, let's now consider the earnings of different households.
+      </ArticleText>
     </ArticleText>
   </div>
 </div>

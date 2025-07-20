@@ -9,37 +9,39 @@
 <div>
   <Scroller layout="left">
     {#snippet sticky()}
-    <!-- Visualization pulled from BWDC's Assets & Debts data. -->
+      <!-- Visualization pulled from BWDC's Assets & Debts data. -->
       <HouseholdGraph />
 
       <div class="BWDC-graph-link">
         <a
           href="https://public.tableau.com/views/BWDC-AssetsDebt-SCFTimeSeries/SCFTimeSeries?:language=en-US&padding=0&:embed=y&:sid=&:redirect=auth&:origin=viz_share_link&:display_count=n&position=relative"
         >
-        <button>🔍 View this BWDC graph in another tab</button>
+          <button>🔍 View this BWDC graph in another tab</button>
         </a>
       </div>
     {/snippet}
 
     {#snippet scrolly()}
-    <ArticleText>
-      To better understand the relationship between education and wealth, I've summarized a few shocking insights from this BWDC graph.
-    </ArticleText>
+      <ArticleText>
+        <strong>Below</strong>, I've summarized a few shocking insights from
+        this BWDC graph, based on those with the highest median net worth—White
+        households.
+      </ArticleText>
 
       <ArticleText>
-        <strong>Change the dropdown below</strong> to learn something new.
+        <strong>Change the dropdown to learn something new</strong>.
         <br /><br />
-        <!-- TODO: make comparison accurate + cute-->
         <HouseholdComparison />
       </ArticleText>
 
       <ArticleText>
-       <ArticleText>
-        <strong>Certain households</strong> grow wealthier than others despite having lower education status. 
-       </ArticleText>
-        <ArticleText>
-          <strong>Contrary to the rhetoric from before</strong>, education <u>cannot</u> serve as a 1-way ticket to wealth.
-        </ArticleText>
+        <strong>White households</strong> with lower levels of education reflect
+        more wealth than other households with higher education status.
+      </ArticleText>
+
+      <ArticleText>
+        <strong>Therefore</strong>, education alone
+        <u>cannot</u> serve as a 1-way ticket to wealth.
       </ArticleText>
     {/snippet}
   </Scroller>
