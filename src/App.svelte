@@ -11,7 +11,7 @@
   import FirstTransition from "./sections/FirstTransition.svelte";
   import SecondTransition from "./sections/SecondTransition.svelte";
   import ThirdTransition from "./sections/ThirdTransition.svelte";
-  import FourthTransition from "./sections/ThirdTransition.svelte";
+  import FourthTransition from "./sections/FourthTransition.svelte";
   import FinalTransition from "./sections/FinalTransition.svelte";
   import AcknowledgementsSection from "./sections/AcknowledgementsSection.svelte";
   // KWK examples from Scrollytelling template
