@@ -63,11 +63,11 @@
 
 .content {
     max-width: 700px;
-    background-color: #ad6a6c;
+    background-color: #d78388;
     padding: 2rem;
     border: 6px solid #5a0001;
     border-radius: 2rem;
-    box-shadow: 16px 16px #8c1d1f;
+    box-shadow: 10px 10px 5px #190a0b;
 }
 
 h1 {
@@ -90,7 +90,7 @@ p {
     color: #f6e8ea;
     text-shadow: 1px 1px 0 #36242b;
     margin-top: 1rem;
-    font-family: monospace;
+    font-family: Georgia;
 }
 
 @media (max-width: 600px) {

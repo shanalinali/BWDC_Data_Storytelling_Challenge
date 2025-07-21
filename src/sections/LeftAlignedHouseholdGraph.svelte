@@ -16,7 +16,7 @@
         <a
           href="https://public.tableau.com/views/BWDC-AssetsDebt-SCFTimeSeries/SCFTimeSeries?:language=en-US&padding=0&:embed=y&:sid=&:redirect=auth&:origin=viz_share_link&:display_count=n&position=relative"
         >
-          <button>🔍 Click to Interact with this BWDC graph</button>
+          <button>🔍 <u>Click to Interact with this BWDC graph</u></button>
         </a>
       </div>
     {/snippet}
@@ -48,4 +48,16 @@
 </div>
 
 <style>
+  button {
+    font-family: Verdana;
+    color:#22181C;
+    background-color: #8BBEB2;
+    border-radius: 20px;
+    padding: 10px;
+  }
+
+  button:hover{
+    color: #8BBEB2;
+    background-color: #513942;
+  }
 </style>

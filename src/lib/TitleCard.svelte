@@ -53,7 +53,7 @@
     color: #f6e8ea;
     text-shadow: 1px 1px 0 #36242b;
     margin-top: 1rem;
-    font-family: monospace;
+    font-family: Georgia;
   }
 
   @media (max-width: 600px) {

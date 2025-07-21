@@ -60,15 +60,15 @@
                         src="duck.png"
                         alt="KWK rubber duck!"
                         in:fly={{ y: 200, duration: 500 }}
-                        out:fade={{ duration: 200 }}
+                        out:fade={{ duration: 100 }}
                     />
                     {:else}
                     <img
                       class="car-gif"
                       src="street_cars.gif"
                       alt="Cars gif!"
-                      in:fly={{ delay: 310, duration: 500 }}
-                      out:fade={{ duration: 200 }}
+                      in:fly={{ delay: 300, duration: 500 }}
+                      out:fade={{ duration: 100 }}
                     />
                 {/if}
                 <br />

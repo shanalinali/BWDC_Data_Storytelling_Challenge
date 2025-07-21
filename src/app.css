@@ -13,3 +13,18 @@
 * {
   margin: 0px;
 }
+
+a:link {
+  margin-bottom: 20px;
+  color: rgb(9, 43, 81);
+  text-decoration: none;
+}
+
+a:visited {
+color: rgb(95, 67, 95);
+}
+
+a:hover {
+color: rgb(232, 98, 98);
+text-decoration: underline;
+}

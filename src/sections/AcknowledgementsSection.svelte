@@ -16,15 +16,15 @@
                 <br /><br />
                 Sources are credited in this piece's ReadMe file (linked <a href="https://github.com/shanalinali/BWDC_Data_Storytelling_Challenge">here</a>). 
                 <br /><br />
-                Please feel free to email me <a href="mailto:shanaliislamm@gmail.com">here</a> with any questions/feedback on this piece.
+                Please feel free to email me <a href="mailto:shanaliislamm@gmail.com">here</a> with any questions or feedback on this piece.
             </i></strong>
         </ArticleText>
 
         <ArticleText>
             <strong> <i>
-                Sincere gratitude to the Black Wealth Data Center for providing a plethora of data visualizations, feedback, and many learning experiences through their mission. 
+                Sincere gratitude to the <a href="https://blackwealthdata.org/">Black Wealth Data Center</a> for providing a plethora of data visualizations, feedback, and many learning experiences through their mission. 
                 <br /><br />
-                Gratitude again for the Kode With Klossy team for providing this opportunity, endless support, and a project to remember.
+                Gratitude again for the <a href="https://www.kodewithklossy.com/">Kode With Klossy</a> team for providing this opportunity, endless support, and a project to remember.
             </i></strong>
         </ArticleText>
         {/snippet}

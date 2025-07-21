@@ -1,7 +1,5 @@
 <script>
-  import * as Highcharts from "highcharts";
   import "highcharts/modules/exporting";
-  import { Chart } from "@highcharts/svelte";
   import Scroller from "../lib/Scroller.svelte";
   import ArticleText from "../lib/ArticleText.svelte";
   import ObservedArticleText from "../lib/ObservedArticleText.svelte";
@@ -14,12 +12,11 @@
     entries.forEach((entry) => {
       const elem = entry.target;
 
-      if (entry.intersectionRatio >= 0.9) {
+      if (entry.intersectionRatio >= 0.90) {
         // "active" state
-        elem.style.backgroundColor = "#e3ff00";
-      } else if (entry.intersectionRatio < 0.9) {
+        elem.style.backgroundColor = "#9D6381";
+      } else if (entry.intersectionRatio < 0.90) {
         // "inactive" state
-        // to do BLUR !!!!!
         elem.style.backgroundColor = "#888888";
       }
     });
@@ -36,7 +33,6 @@
     {/snippet}
 
     {#snippet scrolly()}
-      <!-- using the Svelte JS typewriting transition here would be goated -->
       <ObservedArticleText {callback} {options}>
         <i
           >"You can't learn this now.
@@ -50,8 +46,8 @@
         <strong>My father's words </strong>, spoken in Bangla, settle over me,
         and I laugh.
         <br /><br />
-        Our 30-minute carpool drive to work almost always circles back to the topic
-        of me trading stocks soon.
+        Our 30-minute carpool drives to work almost always circle back to the topic
+        of me trading stocks, but "only after I graduate."
       </ArticleText>
 
       <ArticleText>
@@ -71,7 +67,7 @@
         Truthfully, I find that the value of education today <u><i>is</i></u> getting murkier.
       </ArticleText>
 
-      <ArticleText>
+      <ObservedArticleText {callback} {options}>
         <strong
           >2025 reveals a <a
             href="https://www.cnbc.com/2025/05/16/how-college-grads-can-find-a-job-in-a-tough-market.html"
@@ -83,18 +79,10 @@
         Even with a degree, educated workers are
         struggling to find jobs.
         <br /><br />
-      </ArticleText>
+      </ObservedArticleText>
     {/snippet}
   </Scroller>
 </div>
 
 <style>
-  /* TODO: Delete this if unneeded! */
-  /* p {
-    font-size: 1rem;
-    color: #f6e8ea;
-    text-shadow: 1px 1px 0 #36242b;
-    margin-top: 1rem;
-    font-family: Georgia;
-  } */
 </style>

@@ -2,7 +2,26 @@
   import "highcharts/modules/exporting";
   import Scroller from "../lib/Scroller.svelte";
   import ArticleText from "../lib/ArticleText.svelte";
+  import ObservedArticleText from "../lib/ObservedArticleText.svelte";
   import WhitePercentHoldingGraph from "../lib/WhitePercentHoldingGraph.svelte";
+
+  const options = {
+    threshold: [0.85, 0.95],
+  };
+
+  const callback = (entries, observer) => {
+    entries.forEach((entry) => {
+      const elem = entry.target;
+
+      if (entry.intersectionRatio >= 0.9) {
+        // "active" state
+        elem.style.backgroundColor = "#9D6381";
+      } else if (entry.intersectionRatio < 0.9) {
+        // "inactive" state
+        elem.style.backgroundColor = "#888888";
+      }
+    });
+  };
 </script>
 
 <div>
@@ -16,7 +35,7 @@
         <a
           href="https://public.tableau.com/shared/FYYG5K5ZH?:display_count=n&:origin=viz_share_link"
         >
-          <button>🔍 Click to Interact with this BWDC graph</button>
+          <button>🔍 <u>Click to Interact with this BWDC graph</u></button>
         </a>
       </div>
     {/snippet}
@@ -28,11 +47,10 @@
 
       <ArticleText>
         <strong>From 2019 to 2022,</strong> the percent of White and Other race households with stock holdings <u>grew</u>.
-        <br /><br /> At the same time, the percentage of these households with education loans <u>fell</u>. 
-      </ArticleText>
-
-      <ArticleText>
-        <strong>Negative correlation</strong>—meaning that stock assets increased while education debts decreased for these households.
+        <br /><br /> At the same time, the percentage of these households with education loans <u>fell</u>. <br /><br />
+        <ObservedArticleText {callback} {options}>
+          <strong>Negative correlation</strong>—meaning that stock assets increased while education debts decreased for these households.
+        </ObservedArticleText>
       </ArticleText>
 
       <ArticleText>
@@ -41,7 +59,9 @@
 
       <ArticleText>
        <strong>From 2019 to 2022,</strong> the percentage of Black and Hispanic households with stock holdings increased, but <u>so did the percentage of these households with education loans</u>.
-       <br /><br /><strong>Positive correlation</strong>—stock assests and education debts both increased. 
+       <ObservedArticleText {callback} {options}>
+        <strong>Positive correlation</strong>—stock assests and education debts both increased. 
+       </ObservedArticleText>
       </ArticleText>
 
       <ArticleText>
@@ -60,4 +80,16 @@
 </div>
 
 <style>
+  button {
+    font-family: Verdana;
+    color:#22181C;
+    background-color: #8BBEB2;
+    border-radius: 20px;
+    padding: 10px;
+  }
+
+  button:hover{
+    color: #8BBEB2;
+    background-color: #513942;
+  }
 </style>

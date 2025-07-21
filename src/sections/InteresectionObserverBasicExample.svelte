@@ -19,7 +19,7 @@
 
             if (entry.intersectionRatio >= 0.9) {
                 // "active" state
-                elem.style.backgroundColor = "#e3ff00";
+                 elem.style.backgroundColor = "#e3ff00";
             } else if (entry.intersectionRatio < 0.9) {
                 // "inactive" state
 // to do BLUR !!!!!

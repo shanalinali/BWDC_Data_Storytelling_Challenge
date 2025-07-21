@@ -2,7 +2,26 @@
   import "highcharts/modules/exporting";
   import Scroller from "../lib/Scroller.svelte";
   import ArticleText from "../lib/ArticleText.svelte";
+  import ObservedArticleText from "../lib/ObservedArticleText.svelte";
   import EarningsGraph from "../lib/EarningsGraph.svelte";
+
+  const options = {
+    threshold: [0.85, 0.95],
+  };
+
+  const callback = (entries, observer) => {
+    entries.forEach((entry) => {
+      const elem = entry.target;
+
+      if (entry.intersectionRatio >= 0.9) {
+        // "active" state
+        elem.style.backgroundColor = "#9D6381";
+      } else if (entry.intersectionRatio < 0.9) {
+        // "inactive" state
+        elem.style.backgroundColor = "#888888";
+      }
+    });
+  };
 </script>
 
 <div>
@@ -16,7 +35,7 @@
         <a
           href="https://public.tableau.com/views/BWDC-EducationEmployment-MedianAnnualEarnings/2MedianAnnualEarnings?:language=en-US&padding=0&:embed=y&:sid=&:redirect=auth&:origin=viz_share_link&:display_count=n&position=relative"
         >
-          <button>🔍 Click to Interact with this BWDC graph/button>
+          <button>🔍 <u>Click to Interact with this BWDC graph</u></button>
         </a>
       </div>
     {/snippet}
@@ -38,17 +57,17 @@
         earnings for those who completed <u>high school</u>.
       </ArticleText>
 
-      <ArticleText>
+      <ObservedArticleText {callback} {options}>
         <strong>Asian workers</strong> reported the most, followed by White
         workers.
         <br /><br />
-        Both earnings fall within the <strong>$45K - $50K</strong> range.</ArticleText
-      >
+        Both earnings fall within the <strong>$45K - $50K</strong> range.
+      </ObservedArticleText>
 
-      <ArticleText
-        ><strong>Next</strong>, Hispanic workers earned around
+      <ObservedArticleText {callback} {options}>
+        <strong>Next</strong>, Hispanic workers earned around
         <strong>$41K</strong>, followed by Black workers at around
-        <strong>$37K</strong>.</ArticleText
+        <strong>$37K</strong>.</ObservedArticleText
       >
 
       <ArticleText
@@ -62,8 +81,8 @@
         obtained a <u>Bachelor's degree</u>.</ArticleText
       >
 
-      <ArticleText
-        ><strong>Ranking the worker earnings </strong> from highest to lowest,
+      <ObservedArticleText {callback} {options}>
+        <strong>Ranking the worker earnings </strong> from highest to lowest,
         <ol>
           <li>Asian (around $81K)</li>
           <li>White (around $70K)</li>
@@ -72,7 +91,7 @@
         </ol>
         <br />
         This ranking is the same as that for workers who obtained a high school diploma.
-      </ArticleText>
+      </ObservedArticleText>
 
       <ArticleText>
         Except now, there is more than a <u><strong>$25K</strong> difference</u>
@@ -84,17 +103,29 @@
         workers still earned the least in the workforce.
       </ArticleText>
 
-      <ArticleText>
+      <ObservedArticleText {callback} {options}>
         <strong>In fact,</strong> Black workers earn the least in
         <strong><u>half</u></strong>
         of the education levels included in this BWDC visualization (4 out of 8
         education levels).
         <br /><br />
         <strong>Hispanic workers</strong> earn the least in the other 4.
-      </ArticleText>
+      </ObservedArticleText>
     {/snippet}
   </Scroller>
 </div>
 
 <style>
+  button {
+    font-family: Verdana;
+    color:#22181C;
+    background-color: #8BBEB2;
+    border-radius: 20px;
+    padding: 10px;
+  }
+
+  button:hover{
+    color: #8BBEB2;
+    background-color: #513942;
+  }
 </style>
