@@ -7,7 +7,7 @@
   import LeftAlignedHouseholdGraph from "./sections/LeftAlignedHouseholdGraph.svelte";
   import RightAlignedPercentHolding from "./sections/RightAlignedPercentHolding.svelte";
   // Sections for transitioning the story
-  import TitleSection from "./sections/TitleSection.svelte";
+  import TypewriterTitleSection from "./sections/TypewriterTitleSection.svelte";
   import FirstTransition from "./sections/FirstTransition.svelte";
   import SecondTransition from "./sections/SecondTransition.svelte";
   import ThirdTransition from "./sections/ThirdTransition.svelte";
@@ -17,13 +17,13 @@
   // KWK examples from Scrollytelling template
   import InteresectionObserverBasicExample from "./sections/InteresectionObserverBasicExample.svelte";
   import IntersectionObserverAlertExample from "./sections/IntersectionObserverAlertExample.svelte";
-  import DisappearingDuckExample from "./sections/DisappearingDuckExample.svelte";
+  import DisappearingDuckPractice from "./sections/DisappearingDuckPractice.svelte";
   import IntersectionObserverSectionCard from "./sections/IntersectionObserverSectionCard.svelte";
   import IntersectionObserverListExample from "./sections/IntersectionObserverListExample.svelte";
 </script>
 
 <main>
-  <TitleSection />
+  <TypewriterTitleSection />
   <RightAlignedNoGraph />
   <LeftAlignedEnrollmentGraph />
   <FirstTransition />
@@ -36,9 +36,9 @@
   <FinalTransition />
   <AcknowledgementsSection />
 
+  <DisappearingDuckPractice />
   <IntersectionObserverSectionCard />
   <InteresectionObserverBasicExample />
   <IntersectionObserverAlertExample />
-  <DisappearingDuckExample />
   <IntersectionObserverListExample />
 </main>

@@ -58,17 +58,17 @@
         <strong>I know the merit</strong> behind understanding today's market
         trends, of course.
         <br /><br />
-        However, my Computer Science undergraduate degree will hold value to me too,
-        once I achieve it.
+        However, my Computer Science degree will hold value to me too,
+        once I achieve it. My studies are time-consuming enough, stocks and trading aside.
         <br /><br />
-        Why would my education's value <i>diminish</i> in the context of wealth?
+        Why would my education's value <i>diminish</i> in the context of wealth anyways?
       </ArticleText>
 
       <ArticleText>
         <strong>It's a common question</strong> for current college students,
         like myself.
         <br /><br />
-        Shockingly, the value of education today <i>is</i> getting murkier.
+        Truthfully, I find that the value of education today <u><i>is</i></u> getting murkier.
       </ArticleText>
 
       <ArticleText>

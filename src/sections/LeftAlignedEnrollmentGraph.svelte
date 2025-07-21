@@ -15,15 +15,15 @@
         <a
           href="https://public.tableau.com/views/BWDC-EducationEmployment-Grade12andUndergradEnrollmentRates/EDU07?:language=en-US&padding=0&:embed=y&:sid=&:redirect=auth&:origin=viz_share_link&:display_count=n&position=relative"
         >
-        <button>🔍 View this BWDC graph in another tab</button>
+        <button>🔍 Click to Interact with this BWDC graph</button>
         </a>
       </div>
     {/snippet}
 
     {#snippet scrolly()}
       <ArticleText>
-        <strong>In fact,</strong> undergraduate enrollment rates have <i>decreased</i>
-        across all races, according to the <a href="https://blackwealthdata.org/">Black Wealth Data Center</a>.
+        <strong>In fact,</strong> undergraduate enrollment rates have <u>decreased</u>
+        across all races, according to the <a href="https://blackwealthdata.org/">Black Wealth Data Center (BWDC)</a>.
       </ArticleText>
 
       <ArticleText>
@@ -49,7 +49,7 @@
       </ArticleText>
 
       <ArticleText>
-        Evidently, less adults are pursuing higher education. 
+        Evidently, less students are pursuing higher education. 
       </ArticleText>
     {/snippet}
   </Scroller>

@@ -16,7 +16,7 @@
         <a
           href="https://public.tableau.com/views/BWDC-EducationEmployment-MedianAnnualEarnings/2MedianAnnualEarnings?:language=en-US&padding=0&:embed=y&:sid=&:redirect=auth&:origin=viz_share_link&:display_count=n&position=relative"
         >
-          <button>🔍 View this BWDC graph in another tab</button>
+          <button>🔍 Click to Interact with this BWDC graph/button>
         </a>
       </div>
     {/snippet}
@@ -32,7 +32,7 @@
       </ArticleText>
 
       <ArticleText>
-        <strong>BWDC</strong> breaks it down clearly. 
+        <strong><a href="https://blackwealthdata.org/">The Black Wealth Data Center (BWDC)</a></strong> breaks it down clearly. 
         <br /><br />
         Let's consider the median
         earnings for those who completed <u>high school</u>.
@@ -42,7 +42,7 @@
         <strong>Asian workers</strong> reported the most, followed by White
         workers.
         <br /><br />
-        Both fall within the <strong>$45K - $50K</strong> range.</ArticleText
+        Both earnings fall within the <strong>$45K - $50K</strong> range.</ArticleText
       >
 
       <ArticleText

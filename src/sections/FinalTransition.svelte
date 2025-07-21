@@ -6,15 +6,17 @@
 <div class="text-container">
   <div class="content">
     <ArticleText>
-      I urge you to not blindly believe that a degree will grant you wealth. 
+      Therefore, the mindset that a degree will grant wealth is misleading. 
       <br /><br />
-      The sooner we realize this disparity, the sooner we can combat the barriers that <i>cause</i >this. 
+      For minorities like Black and Hispanic students, higher education brings more risk, and earning enough to mitigate that risk will <i>still</i> be less than the earnings of their White counterparts or even those at a lower education level.
+      
       <br /><br />
-      Education can return to its value today, as we were promised when we first started this educational journey. 
+      The sooner we <i>acknowledge</i> this disparity, the sooner we can address the obstacles that <i>cause</i > it and support students disproportionately affected by the competitive job market today. 
     </ArticleText>
 
     <ArticleText>
-      yap yap sappy Call To Action insert :o
+      Sincerely, 
+      <br /> A pensive undergraduate already stressing over job applications.
     </ArticleText>
   </div>
 </div>

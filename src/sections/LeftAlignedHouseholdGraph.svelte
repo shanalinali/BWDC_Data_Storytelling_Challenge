@@ -16,7 +16,7 @@
         <a
           href="https://public.tableau.com/views/BWDC-AssetsDebt-SCFTimeSeries/SCFTimeSeries?:language=en-US&padding=0&:embed=y&:sid=&:redirect=auth&:origin=viz_share_link&:display_count=n&position=relative"
         >
-          <button>🔍 View this BWDC graph in another tab</button>
+          <button>🔍 Click to Interact with this BWDC graph</button>
         </a>
       </div>
     {/snippet}
@@ -40,8 +40,8 @@
       </ArticleText>
 
       <ArticleText>
-        <strong>Therefore</strong>, education alone
-        <u>cannot</u> serve as a 1-way ticket to wealth.
+        <strong>Education alone</strong>
+        <u>does not</u> serve as a 1-way ticket to wealth, especially for minorities.
       </ArticleText>
     {/snippet}
   </Scroller>
