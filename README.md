@@ -1,9 +1,6 @@
-# KWK Scrollytelling template
+# College Degree or "Don't Need"
+This Scrollytelling piece is a submission for the Kode With Klossy 2025 Data Storytelling Challenge. This dissects the relationship between one's highest education level and their wealth in order to deduce if pursuing higher education is an immediate ticket to generating wealth (Spoiler: Not really). 
 
-This template is a starting point / example of how to create a scrollytelling piece using Svelte and Highcharts! 
-
-## Demo
-See a live demo of the page [here](https://jasminesamra.github.io/kwk-scrollytelling-template/)!
 
 ## Credit
 Repo created using vite (`npm create vite@6`).
