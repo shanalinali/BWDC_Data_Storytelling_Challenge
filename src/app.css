@@ -10,10 +10,12 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Removes the white border on webpage*/
 * {
   margin: 0px;
 }
 
+/* Styling the different states of a link */
 a:link {
   margin-bottom: 20px;
   color: rgb(9, 43, 81);

@@ -5,7 +5,7 @@
   import PercentHoldingsGraph from "../lib/PercentHoldingsGraph.svelte";
   import { fade } from "svelte/transition";
 
-  // Boolean to determine if the BWDC graph has static vs. interactive dislay
+  // Boolean to determine if the BWDC graph has static vs. interactive display
   let showEmbed = false;
 
   // 0 will show the percent stock holdings and education loans for White households
@@ -30,18 +30,20 @@
     });
   };
 
+  // Switch to image of percent stock holdings and education loans for Black households
   const showBlackHouseholdsCallback = (entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting && entry.intersectionRatio >= 0.9) {
-        showBlackHouseholds = 1; // Switch to image of percent stock holdings and education loans for Black households
+        showBlackHouseholds = 1;
       }
     });
   };
 
+  // Switch to image of percent stock holdings and education loans for White households
   const showWhiteHouseholdsCallback = (entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting && entry.intersectionRatio >= 0.9) {
-        showBlackHouseholds = 0; // Switch to image of percent stock holdings and education loans for White households
+        showBlackHouseholds = 0;
       }
     });
   };
@@ -50,10 +52,12 @@
 <div>
   <Scroller layout="right">
     {#snippet sticky()}
-      <!-- Visualization pulled from BWDC's Education data. -->
-      <!-- Conditonal to toggle between the static vs. interactive graph was debugged using ChatGPT -->
+      <!-- Visualization pulled from BWDC's Assests & Debts data. -->
+      <!-- Conditonal to toggle between the static vs. interactive graph data + Conditional to fade between different Household images were debugged using ChatGPT -->
       {#if !showEmbed}
+        <!-- Show static image -->
         {#if showBlackHouseholds === 0}
+          <!-- Show static image of White Household percentages -->
           <img
             src="WhiteHouseholdHoldings.png"
             alt="Percentage of White households holding stock assets and education loans from 2007 - 2022 from the Black Wealth Data Center."
@@ -66,6 +70,7 @@
             </button>
           </div>
         {:else}
+          <!-- Show static image of Black Household percentages -->
           <img
             src="BlackHouseholdHoldings.png"
             alt="Percentage of Black households holding stock assets and education loans from 2007 - 2022 from the Black Wealth Data Center."
@@ -79,6 +84,7 @@
           </div>
         {/if}
       {:else}
+        <!-- Show embedded, interactive graph -->
         <PercentHoldingsGraph />
 
         <div class="BWDC-graph-link">
@@ -108,9 +114,9 @@
 
         <h5>
           <i
-            >NOTE: Only White households are pictured because both fiters cannot
-            be displayed at once. Click the interactive button underneath the
-            graph to observe this trend for Other race households as well!</i
+            >NOTE: Only White households are pictured because both filters
+            cannot be displayed at once. Click the interactive button underneath
+            the graph to observe this trend for Other race households as well!</i
           >
         </h5>
         <br /><br />
@@ -133,9 +139,9 @@
         <br /><br />
         <h5>
           <i
-            >NOTE: Only Black households are pictured because both fiters cannot
-            be displayed at once. Click the interactive button underneath the
-            graph to observe this trend for Hispanic households as well!</i
+            >NOTE: Only Black households are pictured because both filters
+            cannot be displayed at once. Click the interactive button underneath
+            the graph to observe this trend for Hispanic households as well!</i
           >
         </h5>
       </ArticleText>
@@ -164,6 +170,7 @@
 </div>
 
 <style>
+  /* Styling the different states of the button */
   button {
     font-family: Verdana;
     color: #22181c;

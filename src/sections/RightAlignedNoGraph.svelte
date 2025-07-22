@@ -26,8 +26,9 @@
 <div>
   <Scroller layout="right">
     {#snippet sticky()}
+    <!-- Displaying GIF of moving cars -->
       <img
-        alt="Copyright-free gif of cartoon cars on a street from a bird's eye view."
+        alt="Royalty-free GIF of cartoon cars on a street from a bird's eye view."
         src="street_cars.gif"
       />
     {/snippet}

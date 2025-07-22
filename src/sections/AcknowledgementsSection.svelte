@@ -4,7 +4,7 @@
 </script>
 
 <div>
-    <Scroller layout="left">
+    <Scroller layout="right">
         {#snippet scrolly()}
         <ArticleText>
             Thank you for reading my first Scrollytelling narrative! 
@@ -30,17 +30,15 @@
         {/snippet}
 
         {#snippet sticky()}
-        <!-- TODO: add an image of myself lolol -->
-            <img class="duck-img" src="duck.png" alt="KWK rubber duck!" />
+            <!-- svelte-ignore a11y_img_redundant_alt -->
+            <img class="profile-photo" src="Profile_Photo_Acknowledgements.jpg" alt="Photo of Shanali modeling for ASU's Sun Devil Campus Bookstores!" />
         {/snippet}
-
-        
     </Scroller>
 </div>
 
 <style>
-    .duck-img {
-        width: 25%;
+    .profile-photo {
+        width: 60%;
         margin: 0px auto;
     }
 </style>

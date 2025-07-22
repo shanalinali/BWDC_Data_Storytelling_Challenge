@@ -14,12 +14,6 @@
   import FourthTransition from "./sections/FourthTransition.svelte";
   import FinalTransition from "./sections/FinalTransition.svelte";
   import AcknowledgementsSection from "./sections/AcknowledgementsSection.svelte";
-  // KWK examples from Scrollytelling template
-  import InteresectionObserverBasicExample from "./sections/InteresectionObserverBasicExample.svelte";
-  import IntersectionObserverAlertExample from "./sections/IntersectionObserverAlertExample.svelte";
-  import DisappearingDuckPractice from "./sections/DisappearingDuckPractice.svelte";
-  import IntersectionObserverSectionCard from "./sections/IntersectionObserverSectionCard.svelte";
-  import IntersectionObserverListExample from "./sections/IntersectionObserverListExample.svelte";
 </script>
 
 <main>
@@ -35,10 +29,4 @@
   <RightAlignedPercentHolding />
   <FinalTransition />
   <AcknowledgementsSection />
-
-  <DisappearingDuckPractice />
-  <IntersectionObserverSectionCard />
-  <InteresectionObserverBasicExample />
-  <IntersectionObserverAlertExample />
-  <IntersectionObserverListExample />
 </main>

@@ -1,4 +1,4 @@
-<!-- Note: Attended Office Hours with KWK Jasmine to figure out this code! -->
+<!-- Attended Office Hours with KWK Jasmine to figure out this code! -->
 <script>
     import TypewriterTitleCard from "../lib/TypewriterTitleCard.svelte";
     

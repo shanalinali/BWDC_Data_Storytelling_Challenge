@@ -1,3 +1,4 @@
+<!-- Embed code pulled from BWDC website -->
 <script>
   import { onMount } from "svelte";
 

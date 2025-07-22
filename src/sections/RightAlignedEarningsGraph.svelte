@@ -1,5 +1,4 @@
 <script>
-  import "highcharts/modules/exporting";
   import Scroller from "../lib/Scroller.svelte";
   import ArticleText from "../lib/ArticleText.svelte";
   import ObservedArticleText from "../lib/ObservedArticleText.svelte";
@@ -31,18 +30,20 @@
     });
   };
 
+  // Switch to image of earnings of those with a Bachelor's degree
   const showBachelorsCallback = (entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting && entry.intersectionRatio >= 0.9) {
-        showBachelors = 1; // Switch to image of earnings from those with a Bachelor's degree
+        showBachelors = 1; 
       }
     });
   };
 
+  // Switch to image of earnings of those with High school completion
   const showHighSchoolCallback = (entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting && entry.intersectionRatio >= 0.9) {
-        showBachelors = 0; // Switch to image of earnings from those with High school completion
+        showBachelors = 0; 
       }
     });
   };
@@ -52,9 +53,11 @@
   <Scroller layout="right">
     {#snippet sticky()}
       <!-- Visualization pulled from BWDC's Education data. -->
-      <!-- Conditonal to toggle between the static vs. interactive graph was debugged using ChatGPT -->
+      <!-- Conditonal to toggle between the static vs. interactive graph data + Conditional to fade between different Education Level images were debugged using ChatGPT -->
       {#if !showEmbed}
+      <!-- Show static image -->
         {#if showBachelors === 0}
+        <!-- Show static image at High school completion level -->
           <img
             src="Earnings_HighSchoolCompletion.png"
             alt="Line graph of Median Annual Earnings for Full-Time Workers (25-34 Years Old) with High school completion from the Black Wealth Data Center."
@@ -67,6 +70,7 @@
             </button>
           </div>
         {:else}
+          <!-- Show static image at Bachelor's degree level -->
           <img
             src="Earnings_BachelorsDegree.png"
             alt="Line graph of Median Annual Earnings for Full-Time Workers (25-34 Years Old) with a Bachelor's degree from the Black Wealth Data Center."
@@ -80,6 +84,7 @@
           </div>
         {/if}
       {:else}
+      <!-- Show embedded interactive graph -->
         <EarningsGraph />
 
         <div class="BWDC-graph-link">
@@ -172,6 +177,7 @@
 </div>
 
 <style>
+  /* Styling the different states of the button */
   button {
     font-family: Verdana;
     color: #22181c;

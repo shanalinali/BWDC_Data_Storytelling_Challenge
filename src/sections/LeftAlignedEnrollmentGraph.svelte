@@ -5,6 +5,7 @@
   import ObservedArticleText from "../lib/ObservedArticleText.svelte";
   import EnrollmentGraph from "../lib/EnrollmentGraph.svelte";
 
+  // Boolean to determine if the BWDC graph has static vs. interactive dislay
   let showEmbed = false;
 
   const options = {
@@ -32,6 +33,7 @@
     <!-- Visualization pulled from BWDC's Education data. -->
     <!-- Conditonal to toggle between the static vs. interactive graph was debugged using ChatGPT -->
       {#if !showEmbed}
+      <!-- Show static image -->
         <img
           alt="Bar graph of Grade 12 and Undergrad Enrollment Rates from the Black Wealth Data Center."
           src="Enrollment_Chart.png"
@@ -43,6 +45,7 @@
           </button>
         </div>
       {:else}
+      <!-- Show embedded, interactive graph -->
         <EnrollmentGraph />
 
         <div class="BWDC-graph-link">
@@ -91,6 +94,7 @@
 </div>
 
 <style>
+  /* Styling the different states of the button */
   button {
     font-family: Verdana;
     color: #22181c;

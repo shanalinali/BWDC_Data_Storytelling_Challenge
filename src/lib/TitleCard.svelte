@@ -1,7 +1,5 @@
 <script>
   let { title, subtitle, author } = $props();
-  // import { fade } from 'svelte/transition'; get help in office hours with this transition!!
-  //  or using the Svelte JS typewriting transition here would be goated
 </script>
 
 <div class="title-card">

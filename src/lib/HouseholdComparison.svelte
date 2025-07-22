@@ -29,6 +29,7 @@
     <option>White + Bachelor's Degree or higher</option>
   </select>
   
+  <!-- Used ChatGPT to debug array parsing (like {medianNetWorth[degree]}) -->
   <p><br><u>In 2022, their median net worth was </u><br>{medianNetWorth[degree]}<br><br> <u>This exceeded <br></u>{outcomes[degree]}</p>
 
 </div>

@@ -13,6 +13,7 @@
       <!-- Visualization pulled from BWDC's Education data. -->
       <!-- Conditonal to toggle between the static vs. interactive graph was debugged using ChatGPT -->
       {#if !showEmbed}
+      <!-- Show static image -->
         <img
           alt="Line graph of Total Median Net Worth for Households, by Race/Ethnicity from the Black Wealth Data Center."
           src="Household_NetWorth.png"
@@ -24,6 +25,7 @@
           </button>
         </div>
       {:else}
+      <!-- Show embedded, interactive graph -->
         <HouseholdGraph />
 
         <div class="BWDC-graph-link">
@@ -61,6 +63,7 @@
 </div>
 
 <style>
+  /* Styling for the different states of the button */
   button {
     font-family: Verdana;
     color: #22181c;

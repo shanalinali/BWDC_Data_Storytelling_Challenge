@@ -45,6 +45,7 @@
         transition: transform 0.5s ease; 
     }
 
+    /* CSS animation for text content */
     .article-text:hover{
         transform: scale(1.07);
     }
