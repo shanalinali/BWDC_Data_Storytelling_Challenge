@@ -81,7 +81,6 @@ h1 {
 h3 {
     margin: 0;
     color: #f6e8ea;
-    text-shadow: 1px 1px 0 #36242b;
     font-family: Times, "Times New Roman", serif;
 }
 

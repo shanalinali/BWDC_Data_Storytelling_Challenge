@@ -2,7 +2,7 @@
   import { onMount } from "svelte";
 
   onMount(() => {
-    var divElement = document.getElementById("viz1752990861401");
+    var divElement = document.getElementById("viz1753145382251");
     var vizElement = divElement.getElementsByTagName("object")[0];
     vizElement.style.width = "900px";
     vizElement.style.height = "660px";
@@ -15,32 +15,27 @@
 <div class="container">
   <div
     class="tableauPlaceholder"
-    id="viz1752990861401"
+    id="viz1753145382251"
     style="position: relative"
   >
     <noscript>
       <!-- svelte-ignore a11y_invalid_attribute -->
       <a href="#"
         ><img
-          alt="SCF Time Series  "
-          src="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;BW&#47;BWDC-AssetsDebt-SCFTimeSeries&#47;SCFTimeSeries&#47;1_rss.png"
+          alt="ADT08 "
+          src="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;3B&#47;3BHHNFSJ3&#47;1_rss.png"
           style="border: none"
         /></a
-      ></noscript
-    >
+      >
+    </noscript>
     <!-- svelte-ignore a11y_missing_attribute -->
     <object class="tableauViz" style="display:none;"
       ><param name="host_url" value="https%3A%2F%2Fpublic.tableau.com%2F" />
       <param name="embed_code_version" value="3" />
-      <param name="site_root" value="" /><param
-        name="name"
-        value="BWDC-AssetsDebt-SCFTimeSeries&#47;SCFTimeSeries"
-      /><param name="tabs" value="no" /><param
-        name="toolbar"
-        value="yes"
-      /><param
+      <param name="path" value="shared&#47;3BHHNFSJ3" />
+      <param name="toolbar" value="yes" /><param
         name="static_image"
-        value="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;BW&#47;BWDC-AssetsDebt-SCFTimeSeries&#47;SCFTimeSeries&#47;1.png"
+        value="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;3B&#47;3BHHNFSJ3&#47;1.png"
       /> <param name="animate_transition" value="yes" /><param
         name="display_static_image"
         value="yes"
@@ -50,10 +45,7 @@
       /><param name="display_count" value="yes" /><param
         name="language"
         value="en-US"
-      /><param name="origin" value="viz_share_link" /><param
-        name="filter"
-        value="padding=0"
-      /><param name="filter" value="position=relative" /></object
+      /></object
     >
   </div>
 </div>

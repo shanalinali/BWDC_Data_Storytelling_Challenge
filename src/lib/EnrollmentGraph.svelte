@@ -1,4 +1,15 @@
 <script>
+  import { onMount } from "svelte";
+
+  onMount(() => {
+    var divElement = document.getElementById("viz1752822910915");
+    var vizElement = divElement.getElementsByTagName("object")[0];
+    vizElement.style.width = "900px";
+    vizElement.style.height = "660px";
+    var scriptElement = document.createElement("script");
+    scriptElement.src = "https://public.tableau.com/javascripts/api/viz_v1.js";
+    vizElement.parentNode.insertBefore(scriptElement, vizElement);
+  });
 </script>
 
 <div class="container">
@@ -41,20 +52,7 @@
       <param name="filter" value="position=relative" />
     </object>
   </div>
-  <script type="text/javascript">
-    var divElement = document.getElementById("viz1752822910915");
-    var vizElement = divElement.getElementsByTagName("object")[0];
-    vizElement.style.width = "1000px";
-    vizElement.style.height = "600px";
-    var scriptElement = document.createElement("script");
-    scriptElement.src = "https://public.tableau.com/javascripts/api/viz_v1.js";
-    vizElement.parentNode.insertBefore(scriptElement, vizElement);
-  </script>
 </div>
 
 <style>
-  .tableauPlaceholder {
-    aspect-ratio: 4/3;
-    position: relative;
-  }
 </style>

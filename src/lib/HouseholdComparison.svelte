@@ -36,20 +36,30 @@
 <style>
 .container {
   font-family:'Segoe UI';
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
 }
 
 p {
-    white-space: pre-line;
+  white-space: pre-line;
 }
 
 select {
-    background-color: #5A0001;
-    color: #F6E8EA;
+  background-color: #5A0001;
+  color: #F6E8EA;
+  /* Used ChatGPT to improve dropdown responsiveness/layout across devices */
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: 1px solid #5A0001;
+  max-width: 100%;
+  box-sizing: border-box;
+  font-size: 1rem;
 }
 
 label {
-    border: solid #5a0001 medium;
-    padding: 5px;
-
+  border: solid #5a0001 medium;
+  padding: 5px;
 }
 </style>

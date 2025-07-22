@@ -4,6 +4,14 @@
   import ArticleText from "../lib/ArticleText.svelte";
   import ObservedArticleText from "../lib/ObservedArticleText.svelte";
   import EarningsGraph from "../lib/EarningsGraph.svelte";
+  import { fade } from "svelte/transition";
+
+  // Boolean to determine if the BWDC graph has static vs. interactive dislay
+  let showEmbed = false;
+
+  // 0 will show earnings of those who completed high school
+  // 1 will show earnings of those who completed a Bachelor's degree
+  let showBachelors = 0;
 
   const options = {
     threshold: [0.85, 0.95],
@@ -18,7 +26,23 @@
         elem.style.backgroundColor = "#9D6381";
       } else if (entry.intersectionRatio < 0.9) {
         // "inactive" state
-        elem.style.backgroundColor = "#888888";
+        elem.style.backgroundColor = "#363636";
+      }
+    });
+  };
+
+  const showBachelorsCallback = (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting && entry.intersectionRatio >= 0.9) {
+        showBachelors = 1; // Switch to image of earnings from those with a Bachelor's degree
+      }
+    });
+  };
+
+  const showHighSchoolCallback = (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting && entry.intersectionRatio >= 0.9) {
+        showBachelors = 0; // Switch to image of earnings from those with High school completion
       }
     });
   };
@@ -28,33 +52,64 @@
   <Scroller layout="right">
     {#snippet sticky()}
       <!-- Visualization pulled from BWDC's Education data. -->
-      <EarningsGraph />
+      <!-- Conditonal to toggle between the static vs. interactive graph was debugged using ChatGPT -->
+      {#if !showEmbed}
+        {#if showBachelors === 0}
+          <img
+            src="Earnings_HighSchoolCompletion.png"
+            alt="Line graph of Median Annual Earnings for Full-Time Workers (25-34 Years Old) with High school completion from the Black Wealth Data Center."
+            in:fade={{ duration: 500 }}
+          />
 
-      <!-- make cute !!!! -->
-      <div class="BWDC-graph-link">
-        <a
-          href="https://public.tableau.com/views/BWDC-EducationEmployment-MedianAnnualEarnings/2MedianAnnualEarnings?:language=en-US&padding=0&:embed=y&:sid=&:redirect=auth&:origin=viz_share_link&:display_count=n&position=relative"
-        >
-          <button>🔍 <u>Click to Interact with this BWDC graph</u></button>
-        </a>
-      </div>
+          <div class="BWDC-graph-link">
+            <button on:click={() => (showEmbed = true)}>
+              🔍 <u>Click to Interact with this BWDC graph</u>
+            </button>
+          </div>
+        {:else}
+          <img
+            src="Earnings_BachelorsDegree.png"
+            alt="Line graph of Median Annual Earnings for Full-Time Workers (25-34 Years Old) with a Bachelor's degree from the Black Wealth Data Center."
+            in:fade={{ duration: 500 }}
+          />
+
+          <div class="BWDC-graph-link">
+            <button on:click={() => (showEmbed = true)}>
+              🔍 <u>Click to Interact with this BWDC graph</u>
+            </button>
+          </div>
+        {/if}
+      {:else}
+        <EarningsGraph />
+
+        <div class="BWDC-graph-link">
+          <button on:click={() => (showEmbed = false)}>
+            🔍 <u>Click to Return to Image</u>
+          </button>
+        </div>
+      {/if}
     {/snippet}
 
     {#snippet scrolly()}
-      <ArticleText>
+      <ObservedArticleText callback={showHighSchoolCallback} {options}>
         <strong>Not much.</strong>
+      </ObservedArticleText>
+
+      <ArticleText>
+        <strong>Despite obtaining the same educational level,</strong> workers differ
+        greatly in their financial earnings by race.
       </ArticleText>
 
       <ArticleText>
-        <strong>Despite obtaining the same educational level,</strong> races differ
-        greatly in their financial earnings.
-      </ArticleText>
-
-      <ArticleText>
-        <strong><a href="https://blackwealthdata.org/">The Black Wealth Data Center (BWDC)</a></strong> breaks it down clearly. 
+        <strong
+          ><a href="https://blackwealthdata.org/"
+            >The Black Wealth Data Center (BWDC)</a
+          ></strong
+        >
+        breaks it down clearly.
         <br /><br />
-        Let's consider the median
-        earnings for those who completed <u>high school</u>.
+        Let's consider the median earnings for those who completed
+        <u>high school</u>.
       </ArticleText>
 
       <ObservedArticleText {callback} {options}>
@@ -72,13 +127,13 @@
 
       <ArticleText
         ><strong>Even though</strong> both groups obtained a high school
-        diploma, there is more than a <u>$13K difference</u> between Asian worker earnings
-        (highest) and Black worker earnings (lowest).</ArticleText
+        diploma, there is more than a <u>$13K difference</u> between Asian worker
+        earnings (highest) and Black worker earnings (lowest).</ArticleText
       >
 
-      <ArticleText>
+      <ObservedArticleText callback={showBachelorsCallback} {options}>
         <strong>This disparity</strong> continues if we consider those who
-        obtained a <u>Bachelor's degree</u>.</ArticleText
+        obtained a <u>Bachelor's degree</u>.</ObservedArticleText
       >
 
       <ObservedArticleText {callback} {options}>
@@ -95,19 +150,20 @@
 
       <ArticleText>
         Except now, there is more than a <u><strong>$25K</strong> difference</u>
-        between Asian earnings and Black earnings.
+        between earnings on the high end of the spectrum (Asian workers at $81K)
+        and the low end of the spectrum (Black workers at $56K).
       </ArticleText>
 
       <ArticleText
-        ><strong>All races</strong> received a higher level of education, yet Black
-        workers still earned the least in the workforce.
+        ><strong
+          >Even when all groups received the same, higher level of education</strong
+        >, Black workers still earned the least in the workforce.
       </ArticleText>
 
       <ObservedArticleText {callback} {options}>
         <strong>In fact,</strong> Black workers earn the least in
         <strong><u>half</u></strong>
-        of the education levels included in this BWDC visualization (4 out of 8
-        education levels).
+        of the education levels included in this BWDC visualization—4 out of 8 levels.
         <br /><br />
         <strong>Hispanic workers</strong> earn the least in the other 4.
       </ObservedArticleText>
@@ -118,14 +174,20 @@
 <style>
   button {
     font-family: Verdana;
-    color:#22181C;
-    background-color: #8BBEB2;
+    color: #22181c;
+    background-color: #8bbeb2;
     border-radius: 20px;
     padding: 10px;
   }
 
-  button:hover{
-    color: #8BBEB2;
+  button:hover {
+    color: #8bbeb2;
     background-color: #513942;
+  }
+
+  img {
+    width: 900px;
+    height: 660px;
+    padding: 10px;
   }
 </style>

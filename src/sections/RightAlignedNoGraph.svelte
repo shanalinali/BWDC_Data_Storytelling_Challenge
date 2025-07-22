@@ -17,7 +17,7 @@
         elem.style.backgroundColor = "#9D6381";
       } else if (entry.intersectionRatio < 0.90) {
         // "inactive" state
-        elem.style.backgroundColor = "#888888";
+        elem.style.backgroundColor = "#363636";
       }
     });
   };
@@ -46,8 +46,8 @@
         <strong>My father's words </strong>, spoken in Bangla, settle over me,
         and I laugh.
         <br /><br />
-        Our 30-minute carpool drives to work almost always circle back to the topic
-        of me trading stocks, but "only after I graduate."
+        Our 30-minute carpool drives to work almost always circle back to me 
+        learning how to trade stocks, but "only after I graduate."
       </ArticleText>
 
       <ArticleText>
@@ -57,7 +57,7 @@
         However, my Computer Science degree will hold value to me too,
         once I achieve it. My studies are time-consuming enough, stocks and trading aside.
         <br /><br />
-        Why would my education's value <i>diminish</i> in the context of wealth anyways?
+        Why would the value of my education <i>diminish</i> in the context of wealth anyways?
       </ArticleText>
 
       <ArticleText>
