@@ -16,6 +16,8 @@ Graph images and embedded visualizations used from the [Black Wealth Data Center
 
 Typewriting title card/section created through office hours with KWK staff Jasmine Samra.
 
-Interactive dropdown for household net worth comparisons was debugged using ChatGPT.
+Conditionals for displaying certain graph images and static vs. interactive graph visualizations were debugged using ChatGPT.
 
-CSS styling and transitions were referenced from [W3Schools](https://www.w3schools.com/css/default.asp).
+Interactive dropdown for household net worth comparisons was debugged using ChatGPT (styling and syntax).
+
+CSS styling and transitions throughout the project were referenced from [W3Schools](https://www.w3schools.com/css/default.asp), mainly animations for ArticleText/ObservedArticleText.
